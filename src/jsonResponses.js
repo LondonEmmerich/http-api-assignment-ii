@@ -1,6 +1,6 @@
 const users = { Waluigi: 19 };
 
-//convert the users object to a json string and return it
+// convert the users object to a json string and return it
 const getUsers = (request, response) => {
   const usersString = JSON.stringify(users);
   response.writeHead(200, { 'Content-Type': 'application/json' });
@@ -8,16 +8,16 @@ const getUsers = (request, response) => {
   response.end();
 };
 
-//return the metadata of the users
+// return the metadata of the users
 const getUsersMeta = (request, response) => {
   response.writeHead(200, { 'Content-Type': 'application/json' });
   response.end();
 };
 
-//add a user to the structure and return an ok
+// add a user to the structure and return an ok
 const addUser = (request, response) => {
   let status = 201;
-  //if there is not enough return, return an error
+  // if there is not enough return, return an error
   if (!request.headers.name || !request.headers.age) {
     status = 400;
     response.writeHead(status, { 'Content-Type': 'application/json' });
@@ -26,7 +26,7 @@ const addUser = (request, response) => {
     return;
   }
 
-  //if there is enough info, add it to the object and report to the user
+  // if there is enough info, add it to the object and report to the user
   if (users[request.headers.name]) {
     status = 204;
   }
@@ -36,7 +36,7 @@ const addUser = (request, response) => {
   response.end();
 };
 
-//a catch-all for bad requests
+// a catch-all for bad requests
 const notExist = (request, response) => {
   response.writeHead(404, { 'Content-Type': 'application/json' });
   response.write(JSON.stringify('Does not exist!'));
