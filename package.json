@@ -1,0 +1,24 @@
+{
+  "name": "http-api-assignment-ii",
+  "version": "1.0.0",
+  "description": "430 assignment 5",
+  "main": "./src/server.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "pretest": "eslint --fix ./src",
+    "test": "echo \"Tests complete\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LondonEmmerich/http-api-assignment-ii.git"
+  },
+  "author": "London Emmerich",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/LondonEmmerich/http-api-assignment-ii/issues"
+  },
+  "homepage": "https://github.com/LondonEmmerich/http-api-assignment-ii#readme",
+  "dependencies": {
+    "eslint-plugin-import": "^2.27.5"
+  }
+}
