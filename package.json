@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/LondonEmmerich/http-api-assignment-ii#readme",
   "dependencies": {
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.27.5"
   }
 }
